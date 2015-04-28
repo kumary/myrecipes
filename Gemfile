@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.1'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'uglifier', '>= 1.3.0'
@@ -16,6 +15,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 group :development, :test do
+
+  gem 'sqlite3'
+  gem 'pry'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -26,3 +28,9 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+
+  gem 'pg'
+  gem 'rails_12factor"
+
+end
